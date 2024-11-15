@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">padding:0;
+background-image: url(:/assets/assets/zemin-buyuk.jpg);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="mulakatlar">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>350</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+color:black;
+background:white;
+border-radius:10px;
+font-weight:bold;
+}
+QPushButton::hover{
+color:white;
+background:#47545a;
+border-radius:10px;
+font-weight:bold
+}</string>
+    </property>
+    <property name="text">
+     <string>MÜLAKATLAR</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="mentor_gorusmesi">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>350</y>
+      <width>181</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+color:black;
+background:white;
+border-radius:10px;
+font-weight:bold;
+}
+QPushButton::hover{
+color:white;
+background:#47545a;
+border-radius:10px;
+font-weight:bold
+}</string>
+    </property>
+    <property name="text">
+     <string>MENTÖR GÖRÜŞMESİ</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="basvurular">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>350</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+color:black;
+background:white;
+border-radius:10px;
+font-weight:bold;
+}
+QPushButton::hover{
+color:white;
+background:#47545a;
+border-radius:10px;
+font-weight:bold
+}</string>
+    </property>
+    <property name="text">
+     <string>BAŞVURULAR</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="cikis">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>500</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+color:white;
+background:#47545a;
+border-radius:10px;
+font-weight:bold;
+}
+
+QPushButton::hover{
+color:#47545a;
+background:white;
+border-radius:10px;
+font-weight:bold
+}</string>
+    </property>
+    <property name="text">
+     <string>KAPAT</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>70</y>
+      <width>321</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:white;
+font-size:36px;
+font-weight:bold;
+background:none</string>
+    </property>
+    <property name="text">
+     <string>TERCİHLER MENU</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="assets.qrc"/>
+ </resources>
+ <connections/>
+</ui>

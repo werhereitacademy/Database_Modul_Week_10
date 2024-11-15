@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+*.pyo
+path/*
+credentials.json
+token.json
+# *.xlsx
+.venv/*
+.env

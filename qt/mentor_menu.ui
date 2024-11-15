@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-image: url(:/assets/assets/zemin-buyuk.jpg);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTableWidget" name="tableWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>240</y>
+      <width>771</width>
+      <height>341</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTableView{
+color:black;
+background:white;
+font-weight:bold;
+border-radius:5px
+}</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="filter_select_button">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>190</y>
+      <width>441</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QComboBox{
+border-radius:10px;
+font-weight:bold;
+background:white;
+color:black
+}</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>Vıt Projesinin Tamamına Katılması Uygun Olur</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>VIT Projesi ilk IT Eğtimi Al... ya Yönlendirilmesi Uygun Olur</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>VIT Projesi İngilizce Eğtimi Al... ya Yönlendirilmesi Uygun Olur</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Vit Pojesi Kapsamında Dir.. Yönlendirilmesi Uygun Olur</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Direkt Bireysel Koçluk İle İşe Yönlendirilmesi Uygun Olur</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Bir Sonraki VIT Projesine Katılması Daha Uygun Olur</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Başka Bir Sektöre Yönlendirilmesi</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Diğer</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>80</y>
+      <width>291</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+color:white;
+font-size:36px;
+font-weight:bold;
+background:none
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Mentor Interview</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="main_menu">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>190</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+color:black;
+background:white;
+border-radius:10px;
+font-weight:bold;
+}
+QPushButton::hover{
+color:white;
+background:#47545a;
+border-radius:10px;
+font-weight:bold
+}</string>
+    </property>
+    <property name="text">
+     <string>Main Menu</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="exit_button">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>190</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+color:white;
+background:#47545a;
+border-radius:10px;
+font-weight:bold;
+}
+
+QPushButton::hover{
+color:#47545a;
+background:white;
+border-radius:10px;
+font-weight:bold
+}</string>
+    </property>
+    <property name="text">
+     <string>Exit</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="all_meetings">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>140</y>
+      <width>201</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+color:black;
+background:white;
+border-radius:10px;
+font-weight:bold;
+}
+QPushButton::hover{
+color:white;
+background:#47545a;
+border-radius:10px;
+font-weight:bold
+}</string>
+    </property>
+    <property name="text">
+     <string>All Meetings</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>140</y>
+      <width>351</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit{
+color:black;
+background:white;
+border-radius:10px;
+font-weight:bold;
+padding:5px;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="placeholderText">
+     <string>Enter your search term...</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="search_button">
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>140</y>
+      <width>75</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+color:black;
+background:white;
+border-radius:10px;
+font-weight:bold;
+}
+QPushButton::hover{
+color:white;
+background:#47545a;
+border-radius:10px;
+font-weight:bold
+}</string>
+    </property>
+    <property name="text">
+     <string>Search</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="assets.qrc"/>
+ </resources>
+ <connections/>
+</ui>

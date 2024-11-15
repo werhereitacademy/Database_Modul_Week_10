@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-image: url(:/assets/assets/zemin-buyuk.jpg);
+QWidget::setFixedSize(800, 600);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="search">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>140</y>
+      <width>100</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+color:white;
+background:#db1e3c;
+border-radius:10px;
+font-weight:bold;
+}
+
+QPushButton::hover{
+color:#db1e3c;
+background:white;
+border-radius:10px;
+font-weight:bold
+}</string>
+    </property>
+    <property name="text">
+     <string>Search</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>70</y>
+      <width>241</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:white;
+font-size:36px;
+font-weight:bold;
+background:none</string>
+    </property>
+    <property name="text">
+     <string>APPLICATIONS</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>140</y>
+      <width>361</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit{
+border-radius:10px;
+background:none;
+padding:5px
+}</string>
+    </property>
+    <property name="placeholderText">
+     <string>Enter your search term...</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="assigned_mentor_interviews">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>180</y>
+      <width>231</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+color:black;
+background:white;
+border-radius:10px;
+font-weight:bold;
+}
+QPushButton::hover{
+color:white;
+background:#47545a;
+border-radius:10px;
+font-weight:bold
+}</string>
+    </property>
+    <property name="text">
+     <string>Assigned Mentor Interviews</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="unassigned_mentor_interviews">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>220</y>
+      <width>251</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+color:black;
+background:white;
+border-radius:10px;
+font-weight:bold;
+}
+QPushButton::hover{
+color:white;
+background:#47545a;
+border-radius:10px;
+font-weight:bold
+}</string>
+    </property>
+    <property name="text">
+     <string>Unassigned Mentor Interviews</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="prev_vit_check">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>180</y>
+      <width>151</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+color:black;
+background:white;
+border-radius:10px;
+font-weight:bold;
+}
+QPushButton::hover{
+color:white;
+background:#47545a;
+border-radius:10px;
+font-weight:bold
+}</string>
+    </property>
+    <property name="text">
+     <string>Prev VIT Check</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="filtered_applications">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>220</y>
+      <width>151</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+color:black;
+background:white;
+border-radius:10px;
+font-weight:bold;
+}
+QPushButton::hover{
+color:white;
+background:#47545a;
+border-radius:10px;
+font-weight:bold
+}</string>
+    </property>
+    <property name="text">
+     <string>Filtered Application</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="duplicate_application">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>180</y>
+      <width>151</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+color:black;
+background:white;
+border-radius:10px;
+font-weight:bold;
+}
+QPushButton::hover{
+color:white;
+background:#47545a;
+border-radius:10px;
+font-weight:bold
+}</string>
+    </property>
+    <property name="text">
+     <string>Duplicate Application</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="different_registeration">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>220</y>
+      <width>151</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+color:black;
+background:white;
+border-radius:10px;
+font-weight:bold;
+}
+QPushButton::hover{
+color:white;
+background:#47545a;
+border-radius:10px;
+font-weight:bold
+}</string>
+    </property>
+    <property name="text">
+     <string>Differrent Registration</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="all_applications">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>140</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+color:black;
+background:white;
+border-radius:10px;
+font-weight:bold;
+}
+QPushButton::hover{
+color:white;
+background:#47545a;
+border-radius:10px;
+font-weight:bold
+}</string>
+    </property>
+    <property name="text">
+     <string>All Aplications</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="main_menu">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>180</y>
+      <width>151</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+color:black;
+background:white;
+border-radius:10px;
+font-weight:bold;
+}
+QPushButton::hover{
+color:white;
+background:#47545a;
+border-radius:10px;
+font-weight:bold
+}</string>
+    </property>
+    <property name="text">
+     <string>Main Menu</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="exit">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>220</y>
+      <width>151</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+color:white;
+background:#47545a;
+border-radius:10px;
+font-weight:bold;
+}
+
+QPushButton::hover{
+color:#47545a;
+background:white;
+border-radius:10px;
+font-weight:bold
+}</string>
+    </property>
+    <property name="text">
+     <string>Exit</string>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="tableWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>270</y>
+      <width>761</width>
+      <height>321</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTableView{
+color:black;
+background:white;
+font-weight:bold;
+border-radius:5px
+}</string>
+    </property>
+    <property name="tabKeyNavigation">
+     <bool>true</bool>
+    </property>
+    <property name="dragEnabled">
+     <bool>true</bool>
+    </property>
+    <property name="sortingEnabled">
+     <bool>true</bool>
+    </property>
+    <property name="rowCount">
+     <number>0</number>
+    </property>
+    <attribute name="horizontalHeaderCascadingSectionResizes">
+     <bool>false</bool>
+    </attribute>
+    <attribute name="horizontalHeaderMinimumSectionSize">
+     <number>19</number>
+    </attribute>
+    <attribute name="horizontalHeaderDefaultSectionSize">
+     <number>100</number>
+    </attribute>
+    <attribute name="verticalHeaderMinimumSectionSize">
+     <number>21</number>
+    </attribute>
+    <attribute name="verticalHeaderDefaultSectionSize">
+     <number>25</number>
+    </attribute>
+    <column>
+     <property name="text">
+      <string>Tarih</string>
+     </property>
+     <property name="textAlignment">
+      <set>AlignLeading|AlignVCenter</set>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Isim Soyisim</string>
+     </property>
+     <property name="textAlignment">
+      <set>AlignLeading|AlignVCenter</set>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Email</string>
+     </property>
+     <property name="textAlignment">
+      <set>AlignLeading|AlignVCenter</set>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Telefon</string>
+     </property>
+     <property name="textAlignment">
+      <set>AlignLeading|AlignVCenter</set>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Posta Kodu</string>
+     </property>
+     <property name="textAlignment">
+      <set>AlignLeading|AlignVCenter</set>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Eyalet</string>
+     </property>
+     <property name="textAlignment">
+      <set>AlignLeading|AlignVCenter</set>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Mevcut Durum</string>
+     </property>
+     <property name="textAlignment">
+      <set>AlignLeading|AlignVCenter</set>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Ekonomik Durum</string>
+     </property>
+     <property name="textAlignment">
+      <set>AlignLeading|AlignVCenter</set>
+     </property>
+    </column>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="assets.qrc"/>
+ </resources>
+ <connections/>
+</ui>

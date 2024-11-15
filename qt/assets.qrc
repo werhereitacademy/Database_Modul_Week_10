@@ -1,0 +1,8 @@
+<RCC>
+  <qresource prefix="assets">
+    <file>assets/create_user.jpg</file>
+    <file>assets/send_email.jpg</file>
+    <file>assets/login.jpg</file>
+    <file>assets/zemin-buyuk.jpg</file>
+  </qresource>
+</RCC>

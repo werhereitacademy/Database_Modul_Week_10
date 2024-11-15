@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>send_email_form</class>
+ <widget class="QWidget" name="send_email_form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Send Email</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-image: url(:/assets/assets/send_email.jpg);</string>
+  </property>
+  <widget class="QLabel" name="select_candidate">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>40</y>
+     <width>121</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-weight:bold;
+background:none;</string>
+   </property>
+   <property name="text">
+    <string>Candidates</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="candidate_names">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>60</y>
+     <width>221</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QComboBox{
+border-radius:10px;
+font-weight:bold;
+background:white;
+color:black
+}</string>
+   </property>
+   <property name="currentText">
+    <string/>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>16</width>
+     <height>16</height>
+    </size>
+   </property>
+   <property name="frame">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="email">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>60</y>
+     <width>271</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">padding:5px;
+border-radius:10px;
+font-weight:bold;
+background:white;
+color:black
+</string>
+   </property>
+   <property name="placeholderText">
+    <string>Enter a email address or populate...</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>40</y>
+     <width>101</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-weight:bold;
+background:none;</string>
+   </property>
+   <property name="text">
+    <string>Email Address</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="subject_input">
+   <property name="geometry">
+    <rect>
+     <x>32</x>
+     <y>120</y>
+     <width>541</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">padding:5px;
+border-radius:10px;
+font-weight:bold;
+background:white;
+color:black
+</string>
+   </property>
+   <property name="placeholderText">
+    <string>Enter your email subject...</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>100</y>
+     <width>61</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-weight:bold;
+background:none;</string>
+   </property>
+   <property name="text">
+    <string>Subject</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="textEdit">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>160</y>
+     <width>541</width>
+     <height>181</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">padding:5px;
+border-radius:10px;
+font-weight:bold;
+background:white;
+color:black
+</string>
+   </property>
+   <property name="placeholderText">
+    <string>Enter your message...</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="send_button">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>350</y>
+     <width>120</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+color:white;
+background:#db1e3c;
+border-radius:10px;
+font-weight:bold;
+}
+
+QPushButton::hover{
+color:#db1e3c;
+background:white;
+border-radius:10px;
+font-weight:bold
+}</string>
+   </property>
+   <property name="text">
+    <string>Send</string>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="assets.qrc"/>
+ </resources>
+ <connections/>
+</ui>

@@ -1,15 +1,15 @@
+import json
+
 from PyQt6 import QtCore, QtWidgets
 from PyQt6.QtWidgets import QCompleter, QTableWidgetItem
-import json,sys
+import sys
+import psycopg2
 from PrefenceAdminMenu import Ui_Form_Admin
 from PrefenceMenu import Ui_Form
 
 
-
-
-
 class Ui_interviewsWindow(object):
-    
+
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(854, 569)
@@ -144,7 +144,7 @@ class Ui_interviewsWindow(object):
         self.lineEdit_input.setPlaceholderText(_translate("MainWindow", "Enter text to search.."))
 
 
-        #calling methods
+        # Calling methods
         self.setup_completer()
         self.pushButton_search.clicked.connect(self.search_data)
         self.pushButton_project_sended.clicked.connect(self.sended)
@@ -152,80 +152,128 @@ class Ui_interviewsWindow(object):
         self.pushButton_exit.clicked.connect(self.exit)
         self.pushButton_prefence.clicked.connect(self.preference)
 
-    def jsonData(self):
-        jsonPath = r'coverted_files\Mulakatlar.json'
-        with open(jsonPath, 'r', encoding='utf-8') as file:
-            data = json.load(file)
-        return data
-    
+    db_params = {
+        "host": "localhost",
+        "port": "5432",
+        "dbname": "CRM",
+        "user": "postgres",
+        "password": "sunset2014"
+    }
+
+    def fetchDataFromDB(self):
+        """ Veritabanından mülakat verilerini çeker """
+        connection = psycopg2.connect(
+            host=self.db_params["host"],
+            port=self.db_params["port"],
+            dbname=self.db_params["dbname"],
+            user=self.db_params["user"],
+            password=self.db_params["password"]
+        )
+        cursor = connection.cursor()
+
+        query = '''SELECT "Adınız Soyadınız", "Proje gonderilis tarihi", "Projenin gelis tarihi" FROM Mulakatlar'''
+        cursor.execute(query)
+        data = cursor.fetchall()
+
+        formatted_data = [
+            {
+                "Adınız Soyadınız": row[0],
+                "Proje gonderilis tarihi": row[1] if row[1] else "",
+                "Projenin gelis tarihi": row[2] if row[2] else ""
+            }
+            for row in data
+        ]
+
+        connection.close()
+        return formatted_data
+
+
+
     def roleJson(self):
-        jsonPath = r"python_files\role.json"
+        jsonPath = r"task_2_crm\python_files\role.json"
         with open(jsonPath, 'r', encoding="utf-8") as file:
             data = json.load(file)
         return data
-            
+
 
     def setup_completer(self):
-        data = self.jsonData()
-        names = [entry["Adınız Soyadınız"] for entry in data]
+        """ Otomatik tamamlamayı veritabanından çeker """
+        data = self.fetchDataFromDB()
+        names = [entry['Adınız Soyadınız'] for entry in data]
         completer = QCompleter(names)
         completer.setCaseSensitivity(QtCore.Qt.CaseSensitivity.CaseInsensitive)
         self.lineEdit_input.setCompleter(completer)
 
     def search_data(self):
-        data = self.jsonData()
-        search_name = self.lineEdit_input.text().lower()
-        if not search_name:
-            return
-        found = False
-        for entry in data:
-            if search_name in entry["Adınız Soyadınız"].lower():
-                self.update_table(entry)
-                found = True
-                break
-        if not found:
-            self.clear_table()
+        """ Arama işlemini gerçekleştir """
+        search_text = self.lineEdit_input.text().lower()
+        query = '''SELECT "Adınız Soyadınız", "Proje gonderilis tarihi", "Projenin gelis tarihi" 
+                    FROM Mulakatlar WHERE LOWER("Adınız Soyadınız") LIKE %s'''
+        connection = psycopg2.connect(
+            host=self.db_params["host"],
+            port=self.db_params["port"],
+            dbname=self.db_params["dbname"],
+            user=self.db_params["user"],
+            password=self.db_params["password"]
+        )
+        cursor = connection.cursor()
 
-    def update_table(self, entry):
-        self.columnView.setRowCount(1)
-        self.columnView.setItem(0, 0, QTableWidgetItem(entry["Adınız Soyadınız"]))
-        self.columnView.setItem(0, 1, QTableWidgetItem(entry["Proje gonderilis tarihi"]))
-        self.columnView.setItem(0, 2, QTableWidgetItem(entry["Projenin gelis tarihi"]))
+        cursor.execute(query, (f"%{search_text}%",))
+        data = cursor.fetchall()
 
+        self.columnView.setRowCount(len(data))
+        for row_idx, row in enumerate(data):
+            for col_idx, value in enumerate(row):
+                item = QTableWidgetItem(str(value))
+                self.columnView.setItem(row_idx, col_idx, item)
 
-    def clear_table(self):
-        self.columnView.setRowCount(0)
-
+        connection.close()
 
     def sended(self):
-        jsonData = self.jsonData()
-        sendedItem = [item for item in jsonData if item["Proje gonderilis tarihi"]]
-        self.columnView.setRowCount(len(sendedItem))
-        for i,j in enumerate(sendedItem):
-            self.columnView.setItem(i, 0, QTableWidgetItem(str(j.get("Adınız Soyadınız"))))
-            self.columnView.setItem(i, 1, QTableWidgetItem(str(j.get("Proje gonderilis tarihi"))))
-            self.columnView.setItem(i, 2, QTableWidgetItem(str(j.get("Projenin gelis tarihi"))))
+        """ Gönderilen projeleri göster """
+        query = '''SELECT "Adınız Soyadınız", "Proje gonderilis tarihi", "Projenin gelis tarihi" 
+                    FROM Mulakatlar WHERE "Proje gonderilis tarihi" IS NOT NULL'''
+        self.fetchAndDisplay(query)
 
     def arrived(self):
-        jsonData = self.jsonData()
-        arrivedItem = [item for item in jsonData if item['Projenin gelis tarihi']]
-        self.columnView.setRowCount(len(arrivedItem))
-        for i,j in enumerate(arrivedItem):
-            self.columnView.setItem(i, 0, QTableWidgetItem(str(j.get("Adınız Soyadınız"))))
-            self.columnView.setItem(i, 1, QTableWidgetItem(str(j.get("Proje gonderilis tarihi"))))
-            self.columnView.setItem(i, 2, QTableWidgetItem(str(j.get("Projenin gelis tarihi"))))
+        """ Ulaşan projeleri göster """
+        query = '''SELECT "Adınız Soyadınız", "Proje gonderilis tarihi", "Projenin gelis tarihi" 
+                    FROM Mulakatlar WHERE "Projenin gelis tarihi" IS NOT NULL'''
+        self.fetchAndDisplay(query)
+
+    def fetchAndDisplay(self, query):
+        """ Veritabanından verileri çek ve tablonun içine yerleştir """
+        connection = psycopg2.connect(
+            host=self.db_params["host"],
+            port=self.db_params["port"],
+            dbname=self.db_params["dbname"],
+            user=self.db_params["user"],
+            password=self.db_params["password"]
+        )
+        cursor = connection.cursor()
+        cursor.execute(query)
+        data = cursor.fetchall()
+        self.columnView.setRowCount(len(data))
+
+        for row_idx, row in enumerate(data):
+            for col_idx, value in enumerate(row):
+                item = QTableWidgetItem(str(value))
+                self.columnView.setItem(row_idx, col_idx, item)
+
+        connection.close()
 
     def exit(self):
-        QtWidgets.QApplication.quit()
+        """ Uygulamadan çık """
+        sys.exit()
 
     def preference(self):
         state = self.roleJson()
-        if state["login"] == "admin":  
+        if state["login"] == "admin":
             self.userWindow = QtWidgets.QWidget()
             self.user_ui = Ui_Form_Admin()
             self.user_ui.setupUi(self.userWindow)
             self.userWindow.show()
-            MainWindow.close() 
+            MainWindow.close()
         elif state["login"] == "user":
             self.adminWindow = QtWidgets.QWidget()
             self.adminUi = Ui_Form()
@@ -234,8 +282,6 @@ class Ui_interviewsWindow(object):
             MainWindow.close()
         else:
             print("calismadi")
-
-
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)

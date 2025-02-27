@@ -46,13 +46,13 @@ class AdminMenu(QMainWindow):
         self.back_button.clicked.connect(self.openFile)
 
     def roleJson(self):
-        with open(r'python_files\role.json', "r") as file:
+        with open(r'task_2_crm\python_files\role.json', "r") as file:
             data = json.load(file)
         return data
 
     def load_events(self):
         """'events.json' file loads event data and populates the table."""
-        json_file_path = r"python_files\events.json"  # Path to your events.json file in the project directory
+        json_file_path = r"task_2_crm\python_files\events.json"  # Path to your events.json file in the project directory
         if not os.path.exists(json_file_path):
             QMessageBox.warning(self, "Error", f"{json_file_path} file not found!")
             return

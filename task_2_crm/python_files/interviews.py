@@ -157,7 +157,7 @@ class Ui_interviewsWindow(object):
         "port": "5432",
         "dbname": "CRM",
         "user": "postgres",
-        "password": "sunset2014"
+        "password": ""
     }
 
     def fetchDataFromDB(self):

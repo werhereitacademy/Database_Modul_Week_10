@@ -10,7 +10,7 @@ from PyQt6.QtGui import QFont
 DB_CONFIG = {
     "dbname": "CRM",
     "user": "postgres",
-    "password": "sunset2014",
+    "password": "",
     "host": "localhost",  
     "port": "5432"
 }

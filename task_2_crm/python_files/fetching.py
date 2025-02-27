@@ -44,7 +44,7 @@ for file in files:
 conn = psycopg2.connect(
     dbname="CRM",
     user="postgres",
-    password="sunset2014",
+    password="",
     host="localhost",
     port="5432"
 )

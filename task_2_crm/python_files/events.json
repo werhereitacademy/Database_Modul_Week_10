@@ -1,0 +1,14 @@
+[
+    {
+        "event_name": "Mezunlar Piknigi",
+        "start_time": "05.06.2025",
+        "attendees": "msevinc@gmail.com, ramazan1@example.com",
+        "organizer": "yavuz@werhere.com"
+    },
+    {
+        "event_name": "It Sektorundeki Kadinlar Ilham Semineri",
+        "start_time": "12.03.2025",
+        "attendees": "erennecatikrc@example.com, hanife7@example.com",
+        "organizer": "ibrahim@werhere.com"
+    }
+]

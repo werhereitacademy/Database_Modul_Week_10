@@ -79,10 +79,58 @@ cur.execute(query_2)
 question2 = cur.fetchall()
 print(question2)
 print("________________question3_______________")
-
-
-
-
-
+query_3 = """SELECT first_name, last_name, salary FROM public.employees_table
+where salary > 8700;"""
+cur.execute(query_3)
+question3 = cur.fetchall()
+print(question3)
+print("________________question4_______________")
+query_4 = """SELECT first_name, last_name from employees_table
+where emp_id in (select emp_id from departments_table)"""
+cur.execute(query_4)
+question4 = cur.fetchall()
+print(question4)
+print("________________question5_______________")
+query_5 = """SELECT first_name, last_name from employees_table
+where emp_id in (select emp_id from departments_table where dept_name = 'Technology')"""
+cur.execute(query_5)
+question5 = cur.fetchall()
+print(question5)
+print("________________question6_______________")
+query6 = """select avg(salary) from employees_table
+where gender = 'Female'"""
+query_6 = """select avg(salary) from employees_table
+where gender = 'Female'"""
+cur.execute(query_6)
+question6 = cur.fetchall()
+print(question6)
+print("________________question7_______________")
+query7 = """SELECT dept_name, AVG(salary) AS avg_salary
+FROM employees_table e
+JOIN departments_table d
+ON e.emp_id = d.emp_id
+GROUP BY d.dept_name;
+"""
+cur.execute(query7)
+question7 = cur.fetchall()
+print(question7)
+print("________________question8_______________")
+query_8 = """select max(hire_date), min(hire_date) from employees_table"""
+cur.execute(query_8)
+question8 = cur.fetchall()
+print(question8)
+print("________________question9_______________")
+query9 = """select hire_date, dept_name from employees_table e
+join departments_table d on e.emp_id = d.emp_id
+where e.salary = (select max(salary) from employees_table)"""
+cur.execute(query9)
+question9 = cur.fetchall()
+print(question9)
+print("________________question10_______________")
+query10 = """select hire_date from employees_table where salary = (select min(salary) from employees_table)"""
+cur.execute(query10)
+question10 = cur.fetchall()
+print(question10)
 
 cur.close()
+con.close()

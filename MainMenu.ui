@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>mw_main_menu</class>
+ <widget class="QMainWindow" name="mw_main_menu">
+  <property name="windowModality">
+   <enum>Qt::WindowModality::NonModal</enum>
+  </property>
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>600</width>
+    <height>500</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="focusPolicy">
+   <enum>Qt::FocusPolicy::NoFocus</enum>
+  </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::ContextMenuPolicy::NoContextMenu</enum>
+  </property>
+  <property name="windowTitle">
+   <string>Main Menu</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>icons/manage.svg</normaloff>icons/manage.svg</iconset>
+  </property>
+  <property name="toolTip">
+   <string notr="true"/>
+  </property>
+  <property name="statusTip">
+   <string notr="true"/>
+  </property>
+  <property name="accessibleDescription">
+   <string notr="true"/>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+	font: 11pt &quot;MS Shell Dlg 2&quot;;
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, 
+        stop:0 rgba(173, 216, 230, 255), 
+        stop:1 rgba(255, 255, 255, 255));
+};
+</string>
+  </property>
+  <property name="animated">
+   <bool>false</bool>
+  </property>
+  <property name="documentMode">
+   <bool>false</bool>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::TabShape::Rounded</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <property name="leftMargin">
+     <number>11</number>
+    </property>
+    <property name="topMargin">
+     <number>11</number>
+    </property>
+    <property name="horizontalSpacing">
+     <number>14</number>
+    </property>
+    <property name="verticalSpacing">
+     <number>26</number>
+    </property>
+    <item row="3" column="0">
+     <widget class="QPushButton" name="pushbutton_logout">
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: #008CBA;
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+font: 11pt &quot;MS Shell Dlg 2&quot;;
+    border: none;
+    border-radius: 10px;
+    margin: 5px;
+}
+QPushButton:hover {
+    background-color: #007B9E;
+}
+QPushButton:pressed {
+    background-color: #005f73;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Logout</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>icons/logout.svg</normaloff>icons/logout.svg</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0" colspan="2">
+     <widget class="QFrame" name="frame_icon">
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Shadow::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap>icons/WeRHere2.png</pixmap>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QPushButton" name="pushbutton_applications">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>96</width>
+        <height>55</height>
+       </size>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: #008CBA;
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+font: 11pt &quot;MS Shell Dlg 2&quot;;
+    border: none;
+    border-radius: 10px;
+    margin: 5px;
+}
+QPushButton:hover {
+    background-color: #007B9E;
+}
+QPushButton:pressed {
+    background-color: #005f73;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Applications</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>icons/contacts.svg</normaloff>icons/contacts.svg</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QPushButton" name="pushbutton_admin_menu">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>70</height>
+       </size>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: #008CBA;
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+font: 11pt &quot;MS Shell Dlg 2&quot;;
+    border: none;
+    border-radius: 10px;
+    margin: 5px;
+}
+QPushButton:hover {
+    background-color: #007B9E;
+}
+QPushButton:pressed {
+    background-color: #005f73;
+}</string>
+      </property>
+      <property name="text">
+       <string>Admin Menu</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>icons/manage.svg</normaloff>icons/manage.svg</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QPushButton" name="pushbutton_mentor_meeting">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>70</height>
+       </size>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: #008CBA;
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+font: 11pt &quot;MS Shell Dlg 2&quot;;
+    border: none;
+    border-radius: 10px;
+    margin: 5px;
+}
+QPushButton:hover {
+    background-color: #007B9E;
+}
+QPushButton:pressed {
+    background-color: #005f73;
+}</string>
+      </property>
+      <property name="text">
+       <string>Mentor Meeting</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>icons/referrals.svg</normaloff>icons/referrals.svg</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QPushButton" name="pushbutton_exit">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>55</height>
+       </size>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: #008CBA;
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+font: 11pt &quot;MS Shell Dlg 2&quot;;
+    border: none;
+    border-radius: 10px;
+    margin: 5px;
+}
+QPushButton:hover {
+    background-color: #007B9E;
+}
+QPushButton:pressed {
+    background-color: #005f73;
+}</string>
+      </property>
+      <property name="text">
+       <string>Exit</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>icons/power.svg</normaloff>icons/power.svg</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QPushButton" name="pushbutton_interviews">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>55</height>
+       </size>
+      </property>
+      <property name="sizeIncrement">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: #008CBA;
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+font: 11pt &quot;MS Shell Dlg 2&quot;;
+    border: none;
+    border-radius: 10px;
+    margin: 5px;
+}
+QPushButton:hover {
+    background-color: #007B9E;
+}
+QPushButton:pressed {
+    background-color: #005f73;
+}</string>
+      </property>
+      <property name="text">
+       <string>Interviews</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>icons/members.svg</normaloff>icons/members.svg</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

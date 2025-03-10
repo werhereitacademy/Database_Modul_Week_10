@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ud_login</class>
+ <widget class="QDialog" name="ud_login">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>700</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>700</width>
+    <height>500</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="baseSize">
+   <size>
+    <width>600</width>
+    <height>500</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <family>MS Shell Dlg 2</family>
+    <pointsize>11</pointsize>
+    <italic>false</italic>
+    <bold>false</bold>
+    <kerning>true</kerning>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>User Login Window</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>icons/logout.svg</normaloff>icons/logout.svg</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+	font: 11pt &quot;MS Shell Dlg 2&quot;;
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, 
+        stop:0 rgba(173, 216, 230, 255), 
+        stop:1 rgba(255, 255, 255, 255));
+};
+</string>
+  </property>
+  <property name="locale">
+   <locale language="English" country="Netherlands"/>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,13,1">
+     <property name="spacing">
+      <number>15</number>
+     </property>
+     <property name="sizeConstraint">
+      <enum>QLayout::SizeConstraint::SetFixedSize</enum>
+     </property>
+     <item>
+      <widget class="QWidget" name="widget" native="true"/>
+     </item>
+     <item>
+      <widget class="QFrame" name="frameIcon">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>600</width>
+         <height>500</height>
+        </size>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Shape::NoFrame</enum>
+       </property>
+       <widget class="QLabel" name="label_icon">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>20</y>
+          <width>581</width>
+          <height>151</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="toolTipDuration">
+         <number>2</number>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background-color: #008CBA;
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 10px;
+    margin: 5px;
+}
+QPushButton:hover {
+    background-color: #007B9E;
+}
+QPushButton:pressed {
+    background-color: #005f73;
+}
+QComboBox {
+    padding: 10px;
+    font-size: 14px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 30px;
+    border-left-width: 1px;
+    border-left-color: #ccc;
+    border-left-style: solid;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+};
+ padding: 10px;
+    font-size: 14px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 10px;
+</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>icons/WeRHere2.png</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+        <property name="wordWrap">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QFrame" name="frame">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>200</y>
+          <width>581</width>
+          <height>281</height>
+         </rect>
+        </property>
+        <property name="toolTipDuration">
+         <number>2</number>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Shape::NoFrame</enum>
+        </property>
+        <widget class="QGroupBox" name="groupbox_user_login">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>0</y>
+           <width>541</width>
+           <height>191</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QComboBox {
+    padding: 10px;
+    font-size: 14px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 30px;
+    border-left-width: 1px;
+    border-left-color: #ccc;
+    border-left-style: solid;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+</string>
+         </property>
+         <property name="locale">
+          <locale language="English" country="UnitedStates"/>
+         </property>
+         <property name="title">
+          <string>User Login</string>
+         </property>
+         <widget class="QLabel" name="label_user_name">
+          <property name="geometry">
+           <rect>
+            <x>14</x>
+            <y>30</y>
+            <width>141</width>
+            <height>60</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>MS Shell Dlg 2</family>
+            <pointsize>11</pointsize>
+            <italic>false</italic>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::LayoutDirection::RightToLeft</enum>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLabel {
+    background-color: #008CBA;
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+	font: 11pt &quot;MS Shell Dlg 2&quot;;
+    border: none;
+    border-radius: 10px;
+    margin: 5px;
+}
+QLabel:hover {
+    background-color: #007B9E;
+}
+QLabel:pressed {
+    background-color: #005f73;
+}</string>
+          </property>
+          <property name="text">
+           <string>User Name : </string>
+          </property>
+          <property name="textFormat">
+           <enum>Qt::TextFormat::PlainText</enum>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineedit_user_login">
+          <property name="geometry">
+           <rect>
+            <x>180</x>
+            <y>35</y>
+            <width>351</width>
+            <height>59</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>MS Shell Dlg 2</family>
+            <pointsize>11</pointsize>
+            <italic>false</italic>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="toolTipDuration">
+           <number>1</number>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLineEdit {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}</string>
+          </property>
+          <property name="inputMask">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="placeholderText">
+           <string>User Name</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_password">
+          <property name="geometry">
+           <rect>
+            <x>14</x>
+            <y>93</y>
+            <width>141</width>
+            <height>60</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>MS Shell Dlg 2</family>
+            <pointsize>11</pointsize>
+            <italic>false</italic>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::LayoutDirection::RightToLeft</enum>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLabel {
+	
+    background-color: #008CBA;
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+font: 11pt &quot;MS Shell Dlg 2&quot;;
+    border: none;
+    border-radius: 10px;
+    margin: 5px;
+}
+QLabel:hover {
+    background-color: #007B9E;
+}
+QLabel:pressed {
+    background-color: #005f73;
+}</string>
+          </property>
+          <property name="text">
+           <string>Password: </string>
+          </property>
+          <property name="textFormat">
+           <enum>Qt::TextFormat::PlainText</enum>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineedit_password">
+          <property name="geometry">
+           <rect>
+            <x>180</x>
+            <y>100</y>
+            <width>351</width>
+            <height>60</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>MS Shell Dlg 2</family>
+            <pointsize>11</pointsize>
+            <italic>false</italic>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="toolTipDuration">
+           <number>1</number>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLineEdit {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}</string>
+          </property>
+          <property name="inputMethodHints">
+           <set>Qt::InputMethodHint::ImhHiddenText|Qt::InputMethodHint::ImhNoAutoUppercase|Qt::InputMethodHint::ImhNoPredictiveText|Qt::InputMethodHint::ImhSensitiveData</set>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="echoMode">
+           <enum>QLineEdit::EchoMode::Password</enum>
+          </property>
+          <property name="placeholderText">
+           <string>Password</string>
+          </property>
+          <property name="cursorMoveStyle">
+           <enum>Qt::CursorMoveStyle::LogicalMoveStyle</enum>
+          </property>
+          <property name="clearButtonEnabled">
+           <bool>false</bool>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_error">
+          <property name="geometry">
+           <rect>
+            <x>190</x>
+            <y>159</y>
+            <width>331</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>MS Shell Dlg 2</family>
+            <pointsize>11</pointsize>
+            <italic>false</italic>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="toolTipDuration">
+           <number>-2</number>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">Qlabel{
+	font: 12pt &quot;MS Shell Dlg 2&quot;;
+	color: rgb(182, 29, 10);
+    border: none;
+    border-radius: 12px;
+    margin: 5px;
+}</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <zorder>lineedit_user_login</zorder>
+         <zorder>label_user_name</zorder>
+         <zorder>label_password</zorder>
+         <zorder>lineedit_password</zorder>
+         <zorder>label_error</zorder>
+        </widget>
+        <widget class="QPushButton" name="pushbutton_login">
+         <property name="geometry">
+          <rect>
+           <x>210</x>
+           <y>200</y>
+           <width>171</width>
+           <height>60</height>
+          </rect>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+	
+    background-color: #008CBA;
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+font: 11pt &quot;MS Shell Dlg 2&quot;;
+    border: none;
+    border-radius: 10px;
+    margin: 5px;
+}
+QPushButton:hover {
+    background-color: #007B9E;
+}
+QPushButton:pressed {
+    background-color: #005f73;
+}
+</string>
+         </property>
+         <property name="text">
+          <string>Login</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>icons/login.svg</normaloff>icons/login.svg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>50</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="shortcut">
+          <string>Return</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushbutton_exit">
+         <property name="geometry">
+          <rect>
+           <x>390</x>
+           <y>200</y>
+           <width>171</width>
+           <height>61</height>
+          </rect>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color: #008CBA;
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+font: 11pt &quot;MS Shell Dlg 2&quot;;
+    border: none;
+    border-radius: 10px;
+    margin: 5px;
+}
+QPushButton:hover {
+    background-color: #007B9E;
+}
+QPushButton:pressed {
+    background-color: #005f73;
+}</string>
+         </property>
+         <property name="text">
+          <string>Exit</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>icons/power.svg</normaloff>icons/power.svg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>50</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="shortcut">
+          <string>Ctrl+E</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+     </item>
+     <item>
+      <widget class="QWidget" name="widget_2" native="true"/>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

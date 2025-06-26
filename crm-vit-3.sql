@@ -311,3 +311,17 @@ INSERT INTO VIT2 (
 SELECT COUNT(*) AS total_records FROM VIT2;
 Select *
 From vit2;
+
+
+CREATE TABLE events (
+    id SERIAL PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    start_time TIMESTAMP NOT NULL,
+    participants TEXT,
+    organizer VARCHAR(255)
+);
+
+INSERT INTO events (title, start_time, participants, organizer)
+VALUES 
+    ('Python Training', '2025-07-01 10:00:00', 'alice@example.com, bob@example.com', 'instructor@example.com'),
+    ('Project Meeting', '2025-07-03 14:00:00', 'teamlead@example.com, member1@example.com', 'manager@example.com');

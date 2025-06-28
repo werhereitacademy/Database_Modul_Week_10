@@ -5,8 +5,8 @@ from PyQt6.QtWidgets import QApplication, QMainWindow, QTableWidgetItem
 from PyQt6 import uic
 from PyQt6.QtCore import Qt
 from user_session import UserSession
-from preferences_admin_menu import MainWindow as AdminPreferenceWindow
-from user_preference_menu import MainWindow as UserPreferenceWindow
+#from preferences_admin_menu import MainWindow as AdminPreferenceWindow
+#from user_preference_menu import MainWindow as UserPreferenceWindow
 
 
 class MainWindow(QMainWindow):
@@ -19,7 +19,7 @@ class MainWindow(QMainWindow):
             "host": "localhost",
             "database": "crm-vit-3",
             "user": "postgres",
-            "password": "12",
+            "password": "1234",
             "port": "5432"
         }
         
